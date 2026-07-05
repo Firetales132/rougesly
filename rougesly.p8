@@ -112,9 +112,7 @@ end
 function col()
 pc=px/8
 pr=py/8
-
-ptp=mget(pc,pr)--find player tile position on map 
---ptp is for 'player tile position' 
+--find player tile position on map 
 
 ec=ex/8
 er=ey/8
@@ -123,13 +121,14 @@ er=ey/8
 
 
 if flr(pc) == flr(ec) then
-if flr(pr) == flr(er) then
-
-	dead=1
-	
+	if flr(pr) == flr(er) then
+		dead=1
+		else
+		dead=0
+		end
+		
 	else
 	dead=0
-end
 end
 end
 
