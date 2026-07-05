@@ -21,6 +21,7 @@ end
 
 function _update()
 move_player()
+move_enemy()
 end
 
 function _draw()
@@ -71,6 +72,23 @@ end
 
 function draw_enemy1()
 spr(esprite,ex,ey)
+end
+
+function move_enemy()
+if px<ex then 
+ex=ex-0.25
+
+elseif px>ex then
+ex=ex+0.25
+end
+
+if py<ey then 
+ey=ey-0.25
+
+elseif py>ey then
+ey=ey+0.25
+
+end
 end
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
