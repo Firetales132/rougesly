@@ -36,9 +36,9 @@ end
  
 function move_player()
  if (btn(0)) px-=1 dir=0 saddx=-6 saddy=0 --left
-  if (btn(1)) px+=1 dir=1 saddx=6  saddy=0 --right
+ if (btn(1)) px+=1 dir=1 saddx=6  saddy=0 --right
  if (btn(2)) py-=1 dir=2 saddy=-7 saddx=0 --up
- if (btn(3)) py+=1 dir=3 saddy=7  saddx=0 --down 
+ if (btn(3)) py+=1 dir=3 saddy=8  saddx=0 --down 
 --the var is short for 'sword add y' not sad daddy :i
 --ctrl + scroll :)
 end
@@ -56,6 +56,26 @@ end
 end
  
 
+-->8
+--enemy 1
+function _init()
+make_enemy1()
+end
+
+function make_enemy1()
+esprite=18
+ex=127
+ey=64
+end
+
+function _draw()
+cls()
+draw_enemy1()
+end
+
+function draw_enemy1()
+spr(esprite)
+end
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 00000000001660000066100000666000001610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
